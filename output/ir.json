@@ -1,0 +1,294 @@
+{
+  "calculator.actionauthor": {
+    "id": "calculator.actionauthor",
+    "language": "python",
+    "type": "function",
+    "file_path": "./test_repo\\calculator.py",
+    "module_path": "calculator",
+    "start_line": 13,
+    "end_line": 17,
+    "depends_on": []
+  },
+  "calculator.is_number": {
+    "id": "calculator.is_number",
+    "language": "python",
+    "type": "function",
+    "file_path": "./test_repo\\calculator.py",
+    "module_path": "calculator",
+    "start_line": 19,
+    "end_line": 37,
+    "depends_on": []
+  },
+  "calculator.casting": {
+    "id": "calculator.casting",
+    "language": "python",
+    "type": "function",
+    "file_path": "./test_repo\\calculator.py",
+    "module_path": "calculator",
+    "start_line": 39,
+    "end_line": 46,
+    "depends_on": []
+  },
+  "calculator.actionPlus": {
+    "id": "calculator.actionPlus",
+    "language": "python",
+    "type": "function",
+    "file_path": "./test_repo\\calculator.py",
+    "module_path": "calculator",
+    "start_line": 48,
+    "end_line": 74,
+    "depends_on": [
+      "calculator.casting",
+      "calculator.is_number"
+    ]
+  },
+  "calculator.actionMinus": {
+    "id": "calculator.actionMinus",
+    "language": "python",
+    "type": "function",
+    "file_path": "./test_repo\\calculator.py",
+    "module_path": "calculator",
+    "start_line": 76,
+    "end_line": 102,
+    "depends_on": [
+      "calculator.casting",
+      "calculator.is_number"
+    ]
+  },
+  "calculator.actionMul": {
+    "id": "calculator.actionMul",
+    "language": "python",
+    "type": "function",
+    "file_path": "./test_repo\\calculator.py",
+    "module_path": "calculator",
+    "start_line": 104,
+    "end_line": 130,
+    "depends_on": [
+      "calculator.casting",
+      "calculator.is_number"
+    ]
+  },
+  "calculator.actionDiv": {
+    "id": "calculator.actionDiv",
+    "language": "python",
+    "type": "function",
+    "file_path": "./test_repo\\calculator.py",
+    "module_path": "calculator",
+    "start_line": 132,
+    "end_line": 160,
+    "depends_on": [
+      "calculator.casting",
+      "calculator.is_number"
+    ]
+  },
+  "helper.HelperClass": {
+    "id": "helper.HelperClass",
+    "language": "python",
+    "type": "class",
+    "file_path": "./test_repo\\helper.py",
+    "module_path": "helper",
+    "start_line": 2,
+    "end_line": 50,
+    "depends_on": [
+      "helper.HelperClass.process_data",
+      "helper.DataProcessor",
+      "helper.HelperClass._internal_process",
+      "helper.HelperClass.get_result"
+    ]
+  },
+  "helper.HelperClass.__init__": {
+    "id": "helper.HelperClass.__init__",
+    "language": "python",
+    "type": "method",
+    "file_path": "./test_repo\\helper.py",
+    "module_path": "helper",
+    "start_line": 25,
+    "end_line": 26,
+    "depends_on": []
+  },
+  "helper.HelperClass.process_data": {
+    "id": "helper.HelperClass.process_data",
+    "language": "python",
+    "type": "method",
+    "file_path": "./test_repo\\helper.py",
+    "module_path": "helper",
+    "start_line": 28,
+    "end_line": 38,
+    "depends_on": []
+  },
+  "helper.HelperClass._internal_process": {
+    "id": "helper.HelperClass._internal_process",
+    "language": "python",
+    "type": "method",
+    "file_path": "./test_repo\\helper.py",
+    "module_path": "helper",
+    "start_line": 40,
+    "end_line": 44,
+    "depends_on": []
+  },
+  "helper.HelperClass.get_result": {
+    "id": "helper.HelperClass.get_result",
+    "language": "python",
+    "type": "method",
+    "file_path": "./test_repo\\helper.py",
+    "module_path": "helper",
+    "start_line": 46,
+    "end_line": 50,
+    "depends_on": []
+  },
+  "helper.DataProcessor": {
+    "id": "helper.DataProcessor",
+    "language": "python",
+    "type": "class",
+    "file_path": "./test_repo\\helper.py",
+    "module_path": "helper",
+    "start_line": 52,
+    "end_line": 108,
+    "depends_on": [
+      "helper.DataProcessor._internal_process",
+      "helper.DataProcessor.process"
+    ]
+  },
+  "helper.DataProcessor.process": {
+    "id": "helper.DataProcessor.process",
+    "language": "python",
+    "type": "method",
+    "file_path": "./test_repo\\helper.py",
+    "module_path": "helper",
+    "start_line": 81,
+    "end_line": 93,
+    "depends_on": []
+  },
+  "helper.DataProcessor._internal_process": {
+    "id": "helper.DataProcessor._internal_process",
+    "language": "python",
+    "type": "method",
+    "file_path": "./test_repo\\helper.py",
+    "module_path": "helper",
+    "start_line": 95,
+    "end_line": 108,
+    "depends_on": []
+  },
+  "main.main_function": {
+    "id": "main.main_function",
+    "language": "python",
+    "type": "function",
+    "file_path": "./test_repo\\main.py",
+    "module_path": "main",
+    "start_line": 5,
+    "end_line": 23,
+    "depends_on": [
+      "main.utility_function",
+      "helper.HelperClass",
+      "inner.inner_functions.generate_timestamp"
+    ]
+  },
+  "main.utility_function": {
+    "id": "main.utility_function",
+    "language": "python",
+    "type": "function",
+    "file_path": "./test_repo\\main.py",
+    "module_path": "main",
+    "start_line": 25,
+    "end_line": 34,
+    "depends_on": []
+  },
+  "processor.AdvancedProcessor": {
+    "id": "processor.AdvancedProcessor",
+    "language": "python",
+    "type": "class",
+    "file_path": "./test_repo\\processor.py",
+    "module_path": "processor",
+    "start_line": 6,
+    "end_line": 61,
+    "depends_on": [
+      "helper.HelperClass",
+      "main.utility_function",
+      "helper.DataProcessor",
+      "processor.AdvancedProcessor.run",
+      "processor.AdvancedProcessor.process_result"
+    ]
+  },
+  "processor.AdvancedProcessor.__init__": {
+    "id": "processor.AdvancedProcessor.__init__",
+    "language": "python",
+    "type": "method",
+    "file_path": "./test_repo\\processor.py",
+    "module_path": "processor",
+    "start_line": 27,
+    "end_line": 29,
+    "depends_on": []
+  },
+  "processor.AdvancedProcessor.run": {
+    "id": "processor.AdvancedProcessor.run",
+    "language": "python",
+    "type": "method",
+    "file_path": "./test_repo\\processor.py",
+    "module_path": "processor",
+    "start_line": 31,
+    "end_line": 50,
+    "depends_on": [
+      "processor.AdvancedProcessor"
+    ]
+  },
+  "processor.AdvancedProcessor.process_result": {
+    "id": "processor.AdvancedProcessor.process_result",
+    "language": "python",
+    "type": "method",
+    "file_path": "./test_repo\\processor.py",
+    "module_path": "processor",
+    "start_line": 52,
+    "end_line": 61,
+    "depends_on": []
+  },
+  "inner.inner_functions.inner_function": {
+    "id": "inner.inner_functions.inner_function",
+    "language": "python",
+    "type": "function",
+    "file_path": "./test_repo\\inner\\inner_functions.py",
+    "module_path": "inner.inner_functions",
+    "start_line": 2,
+    "end_line": 16,
+    "depends_on": []
+  },
+  "inner.inner_functions.get_random_quote": {
+    "id": "inner.inner_functions.get_random_quote",
+    "language": "python",
+    "type": "function",
+    "file_path": "./test_repo\\inner\\inner_functions.py",
+    "module_path": "inner.inner_functions",
+    "start_line": 18,
+    "end_line": 32,
+    "depends_on": []
+  },
+  "inner.inner_functions.generate_timestamp": {
+    "id": "inner.inner_functions.generate_timestamp",
+    "language": "python",
+    "type": "function",
+    "file_path": "./test_repo\\inner\\inner_functions.py",
+    "module_path": "inner.inner_functions",
+    "start_line": 34,
+    "end_line": 43,
+    "depends_on": []
+  },
+  "inner.inner_functions.get_system_status": {
+    "id": "inner.inner_functions.get_system_status",
+    "language": "python",
+    "type": "function",
+    "file_path": "./test_repo\\inner\\inner_functions.py",
+    "module_path": "inner.inner_functions",
+    "start_line": 45,
+    "end_line": 59,
+    "depends_on": []
+  },
+  "inner.inner_functions.fetch_user_message": {
+    "id": "inner.inner_functions.fetch_user_message",
+    "language": "python",
+    "type": "function",
+    "file_path": "./test_repo\\inner\\inner_functions.py",
+    "module_path": "inner.inner_functions",
+    "start_line": 61,
+    "end_line": 76,
+    "depends_on": []
+  }
+}
