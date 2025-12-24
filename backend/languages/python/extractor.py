@@ -205,6 +205,5 @@ def extract_components(tree, source, file_path, module_path):
     walk(root, "module")
     
     # Then extract global variables
-    extract_globals()
     
     return components

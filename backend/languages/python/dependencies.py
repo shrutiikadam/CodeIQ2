@@ -451,14 +451,14 @@ def resolve_dependencies(component, tree, source, all_components):
     walk(component_node)
 
     # ---- POST-PROCESSING: Keep valid dependencies ----
+    # ---- POST-PROCESSING: Keep valid dependencies ----
     valid_deps = set()
     for dep in deps:
-        # Only keep dependencies that exist in all_components
-        if dep in all_components:
+        # Keep if it exists as a component OR is a global variable
+        if dep in all_components or dep.split(".")[-1] in global_tracker.global_vars:
             valid_deps.add(dep)
-    
-    return valid_deps
 
+    return valid_deps
 
 def find_component_node(tree, component):
     """

@@ -1,265 +1,20 @@
 {
-  "calculator.actionauthor": {
-    "id": "calculator.actionauthor",
+  "app.block_websites": {
+    "id": "app.block_websites",
     "language": "python",
     "type": "function",
-    "file_path": "./test_repo\\calculator.py",
-    "module_path": "calculator",
-    "depends_on": [],
-    "start_line": 13,
-    "end_line": 17,
-    "has_docstring": true,
-    "docstring": "No docstring provided.",
-    "source_code": "def actionauthor():\n    \"\"\"\n    No docstring provided.\n    \"\"\"\n    messagebox.showinfo('Author', 'Pranta Sarker\\nBatch: 6th\\nDepartment: CSE\\nNorth East University Bangladesh')"
-  },
-  "calculator.is_number": {
-    "id": "calculator.is_number",
-    "language": "python",
-    "type": "function",
-    "file_path": "./test_repo\\calculator.py",
-    "module_path": "calculator",
-    "depends_on": [],
-    "start_line": 19,
-    "end_line": 37,
-    "has_docstring": true,
-    "docstring": "No docstring provided.",
-    "source_code": "def is_number(s):\n    \"\"\"\n    No docstring provided.\n    \"\"\"\n    if s != '':\n        if s.replace('.', '', 1).isdigit():\n            return True\n        if s.isdigit():\n            return True\n        if s[0] in ['-', '+', '.', '0', ' ']:\n            if s[1] == '.':\n                if s[2:].isdigit():\n                    return True\n            if s[1] == '0' and s[2] == '.':\n                if s[3:].isdigit():\n                    return True\n            if s[1:].isdigit():\n                retur..."
-  },
-  "calculator.casting": {
-    "id": "calculator.casting",
-    "language": "python",
-    "type": "function",
-    "file_path": "./test_repo\\calculator.py",
-    "module_path": "calculator",
-    "depends_on": [],
-    "start_line": 39,
-    "end_line": 46,
-    "has_docstring": true,
-    "docstring": "No docstring provided.",
-    "source_code": "def casting(num):\n    \"\"\"\n    No docstring provided.\n    \"\"\"\n    if '.' in num:\n        return float(num)\n    else:\n        return int(num)"
-  },
-  "calculator.actionPlus": {
-    "id": "calculator.actionPlus",
-    "language": "python",
-    "type": "function",
-    "file_path": "./test_repo\\calculator.py",
-    "module_path": "calculator",
+    "file_path": "./test_repo\\app.py",
+    "module_path": "app",
     "depends_on": [
-      "calculator.casting",
-      "calculator.is_number",
-      "calculator.Showtemplabel",
-      "calculator.Showlabel",
-      "calculator.Numberentry1",
-      "calculator.Numberentry2"
+      "app.redirect",
+      "app.default_hoster",
+      "app.sites_to_block"
     ],
-    "start_line": 48,
-    "end_line": 74,
-    "has_docstring": true,
-    "docstring": "No docstring provided.",
-    "source_code": "def actionPlus():\n    \"\"\"\n    No docstring provided.\n    \"\"\"\n    Showtemplabel.delete(0, END)\n    Showlabel.delete(0, END)\n    Showtemplabel.config(fg='red', bg='#9ed8ee')\n    Showtemplabel.insert(0, 'Summation')\n    Showtemplabel.place(relx=0.5, rely=0.5, anchor='center')\n    ans = '0'\n    Showlabel.insert(0, ans)\n    Showlabel.place(relx=0.5, rely=0.6, anchor='center')\n    num1 = Numberentry1.get()\n    num2 = Numberentry2.get()\n    if is_number(num1) == True and is_number(num2) == True and (nu..."
-  },
-  "calculator.actionMinus": {
-    "id": "calculator.actionMinus",
-    "language": "python",
-    "type": "function",
-    "file_path": "./test_repo\\calculator.py",
-    "module_path": "calculator",
-    "depends_on": [
-      "calculator.casting",
-      "calculator.is_number",
-      "calculator.Showtemplabel",
-      "calculator.Showlabel",
-      "calculator.Numberentry1",
-      "calculator.Numberentry2"
-    ],
-    "start_line": 76,
-    "end_line": 102,
-    "has_docstring": true,
-    "docstring": "No docstring provided.",
-    "source_code": "def actionMinus():\n    \"\"\"\n    No docstring provided.\n    \"\"\"\n    Showtemplabel.delete(0, END)\n    Showlabel.delete(0, END)\n    Showtemplabel.config(fg='green', bg='#ece7e2')\n    Showtemplabel.insert(0, 'Subtraction')\n    Showtemplabel.place(relx=0.5, rely=0.5, anchor='center')\n    ans = '0'\n    Showlabel.insert(0, ans)\n    Showlabel.place(relx=0.5, rely=0.6, anchor='center')\n    num1 = Numberentry1.get()\n    num2 = Numberentry2.get()\n    if is_number(num1) == True and is_number(num2) == True:\n ..."
-  },
-  "calculator.actionMul": {
-    "id": "calculator.actionMul",
-    "language": "python",
-    "type": "function",
-    "file_path": "./test_repo\\calculator.py",
-    "module_path": "calculator",
-    "depends_on": [
-      "calculator.casting",
-      "calculator.is_number",
-      "calculator.Showtemplabel",
-      "calculator.Showlabel",
-      "calculator.Numberentry1",
-      "calculator.Numberentry2"
-    ],
-    "start_line": 104,
-    "end_line": 130,
-    "has_docstring": true,
-    "docstring": "No docstring provided.",
-    "source_code": "def actionMul():\n    \"\"\"\n    No docstring provided.\n    \"\"\"\n    Showtemplabel.delete(0, END)\n    Showlabel.delete(0, END)\n    Showtemplabel.config(fg='blue', bg='#cacba9')\n    Showtemplabel.insert(0, 'Multiplication')\n    Showtemplabel.place(relx=0.5, rely=0.5, anchor='center')\n    ans = '0'\n    Showlabel.insert(0, ans)\n    Showlabel.place(relx=0.5, rely=0.6, anchor='center')\n    num1 = Numberentry1.get()\n    num2 = Numberentry2.get()\n    if is_number(num1) == True and is_number(num2) == True:\n ..."
-  },
-  "calculator.actionDiv": {
-    "id": "calculator.actionDiv",
-    "language": "python",
-    "type": "function",
-    "file_path": "./test_repo\\calculator.py",
-    "module_path": "calculator",
-    "depends_on": [
-      "calculator.casting",
-      "calculator.is_number",
-      "calculator.Showtemplabel",
-      "calculator.Showlabel",
-      "calculator.Numberentry1",
-      "calculator.Numberentry2"
-    ],
-    "start_line": 132,
-    "end_line": 160,
-    "has_docstring": true,
-    "docstring": "No docstring provided.",
-    "source_code": "def actionDiv():\n    \"\"\"\n    No docstring provided.\n    \"\"\"\n    Showtemplabel.delete(0, END)\n    Showlabel.delete(0, END)\n    Showtemplabel.delete(0, END)\n    Showlabel.delete(0, END)\n    Showtemplabel.config(fg='yellow', bg='#8dad96')\n    Showtemplabel.insert(0, 'Division')\n    Showtemplabel.place(relx=0.5, rely=0.5, anchor='center')\n    ans = '0'\n    Showlabel.insert(0, ans)\n    Showlabel.place(relx=0.5, rely=0.6, anchor='center')\n    num1 = Numberentry1.get()\n    num2 = Numberentry2.get()\n   ..."
-  },
-  "calculator.root": {
-    "id": "calculator.root",
-    "language": "python",
-    "type": "global_variable",
-    "file_path": "./test_repo\\calculator.py",
-    "module_path": "calculator",
-    "depends_on": [],
-    "start_line": 161,
-    "end_line": 161,
+    "start_line": 32,
+    "end_line": 59,
     "has_docstring": false,
     "docstring": "",
-    "source_code": "root = Tk()"
-  },
-  "calculator.Titlelabel": {
-    "id": "calculator.Titlelabel",
-    "language": "python",
-    "type": "global_variable",
-    "file_path": "./test_repo\\calculator.py",
-    "module_path": "calculator",
-    "depends_on": [],
-    "start_line": 164,
-    "end_line": 164,
-    "has_docstring": false,
-    "docstring": "",
-    "source_code": "Titlelabel = Label(root, fg='green', font='none 10 bold underline', text='Python Calculator', compound=CENTER)"
-  },
-  "calculator.Showlabel": {
-    "id": "calculator.Showlabel",
-    "language": "python",
-    "type": "global_variable",
-    "file_path": "./test_repo\\calculator.py",
-    "module_path": "calculator",
-    "depends_on": [],
-    "start_line": 166,
-    "end_line": 166,
-    "has_docstring": false,
-    "docstring": "",
-    "source_code": "Showlabel = Entry(root)"
-  },
-  "calculator.Showtemplabel": {
-    "id": "calculator.Showtemplabel",
-    "language": "python",
-    "type": "global_variable",
-    "file_path": "./test_repo\\calculator.py",
-    "module_path": "calculator",
-    "depends_on": [],
-    "start_line": 167,
-    "end_line": 167,
-    "has_docstring": false,
-    "docstring": "",
-    "source_code": "Showtemplabel = Entry(root)"
-  },
-  "calculator.Numberentry1": {
-    "id": "calculator.Numberentry1",
-    "language": "python",
-    "type": "global_variable",
-    "file_path": "./test_repo\\calculator.py",
-    "module_path": "calculator",
-    "depends_on": [],
-    "start_line": 168,
-    "end_line": 168,
-    "has_docstring": false,
-    "docstring": "",
-    "source_code": "Numberentry1 = Entry(root)"
-  },
-  "calculator.Numberentry2": {
-    "id": "calculator.Numberentry2",
-    "language": "python",
-    "type": "global_variable",
-    "file_path": "./test_repo\\calculator.py",
-    "module_path": "calculator",
-    "depends_on": [],
-    "start_line": 169,
-    "end_line": 169,
-    "has_docstring": false,
-    "docstring": "",
-    "source_code": "Numberentry2 = Entry(root)"
-  },
-  "calculator.plusbutton": {
-    "id": "calculator.plusbutton",
-    "language": "python",
-    "type": "global_variable",
-    "file_path": "./test_repo\\calculator.py",
-    "module_path": "calculator",
-    "depends_on": [],
-    "start_line": 172,
-    "end_line": 172,
-    "has_docstring": false,
-    "docstring": "",
-    "source_code": "plusbutton = Button(root, text='+', width=5, command=actionPlus)"
-  },
-  "calculator.minusbutton": {
-    "id": "calculator.minusbutton",
-    "language": "python",
-    "type": "global_variable",
-    "file_path": "./test_repo\\calculator.py",
-    "module_path": "calculator",
-    "depends_on": [],
-    "start_line": 174,
-    "end_line": 174,
-    "has_docstring": false,
-    "docstring": "",
-    "source_code": "minusbutton = Button(root, text='-', width=5, command=actionMinus)"
-  },
-  "calculator.mulbutton": {
-    "id": "calculator.mulbutton",
-    "language": "python",
-    "type": "global_variable",
-    "file_path": "./test_repo\\calculator.py",
-    "module_path": "calculator",
-    "depends_on": [],
-    "start_line": 176,
-    "end_line": 176,
-    "has_docstring": false,
-    "docstring": "",
-    "source_code": "mulbutton = Button(root, text='*', width=5, command=actionMul)"
-  },
-  "calculator.divbutton": {
-    "id": "calculator.divbutton",
-    "language": "python",
-    "type": "global_variable",
-    "file_path": "./test_repo\\calculator.py",
-    "module_path": "calculator",
-    "depends_on": [],
-    "start_line": 178,
-    "end_line": 178,
-    "has_docstring": false,
-    "docstring": "",
-    "source_code": "divbutton = Button(root, text='/', width=5, command=actionDiv)"
-  },
-  "calculator.authorbutton": {
-    "id": "calculator.authorbutton",
-    "language": "python",
-    "type": "global_variable",
-    "file_path": "./test_repo\\calculator.py",
-    "module_path": "calculator",
-    "depends_on": [],
-    "start_line": 180,
-    "end_line": 180,
-    "has_docstring": false,
-    "docstring": "",
-    "source_code": "authorbutton = Button(root, text='Author', width=6, command=actionauthor)"
+    "source_code": "def block_websites(start_hour, end_hour):\n    while True:\n        try:\n            if (\n                    dt(dt.now().year, dt.now().month, dt.now().day, start_hour)\n                    < dt.now()\n                    < dt(dt.now().year, dt.now().month, dt.now().day, end_hour)\n            ):\n                print(\"Do the work ....\")\n                with open(default_hoster, \"r+\") as hostfile:\n                    hosts = hostfile.read()\n                    for site in sites_to_block:\n           ..."
   },
   "helper.HelperClass": {
     "id": "helper.HelperClass",
@@ -268,9 +23,9 @@
     "file_path": "./test_repo\\helper.py",
     "module_path": "helper",
     "depends_on": [
-      "helper.HelperClass._internal_process",
-      "helper.HelperClass.process_data",
       "helper.DataProcessor",
+      "helper.HelperClass.process_data",
+      "helper.HelperClass._internal_process",
       "helper.HelperClass.get_result"
     ],
     "start_line": 2,
@@ -340,8 +95,8 @@
     "file_path": "./test_repo\\helper.py",
     "module_path": "helper",
     "depends_on": [
-      "helper.DataProcessor.process",
-      "helper.DataProcessor._internal_process"
+      "helper.DataProcessor._internal_process",
+      "helper.DataProcessor.process"
     ],
     "start_line": 52,
     "end_line": 108,
@@ -411,9 +166,9 @@
     "file_path": "./test_repo\\processor.py",
     "module_path": "processor",
     "depends_on": [
-      "processor.AdvancedProcessor.process_result",
-      "processor.AdvancedProcessor.run",
       "helper.HelperClass",
+      "processor.AdvancedProcessor.run",
+      "processor.AdvancedProcessor.process_result",
       "helper.DataProcessor",
       "main.utility_function"
     ],
@@ -430,8 +185,8 @@
     "file_path": "./test_repo\\processor.py",
     "module_path": "processor",
     "depends_on": [
-      "helper.HelperClass",
-      "helper.DataProcessor"
+      "helper.DataProcessor",
+      "helper.HelperClass"
     ],
     "start_line": 27,
     "end_line": 29,
