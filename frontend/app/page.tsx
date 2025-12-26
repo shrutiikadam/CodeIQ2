@@ -282,6 +282,7 @@ export default function Home() {
                         <div className="text-2xl font-bold text-white mb-1">
                           {typeof value === "number" ? value.toLocaleString() : value}
                         </div>
+                        
                         <div className="text-purple-200 text-sm capitalize">
                           {key.replace(/_/g, " ")}
                         </div>
