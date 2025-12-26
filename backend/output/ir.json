@@ -1,21 +1,4 @@
 {
-  "app.block_websites": {
-    "id": "app.block_websites",
-    "language": "python",
-    "type": "function",
-    "file_path": "./test_repo\\app.py",
-    "module_path": "app",
-    "depends_on": [
-      "app.redirect",
-      "app.default_hoster",
-      "app.sites_to_block"
-    ],
-    "start_line": 32,
-    "end_line": 59,
-    "has_docstring": false,
-    "docstring": "",
-    "source_code": "def block_websites(start_hour, end_hour):\n    while True:\n        try:\n            if (\n                    dt(dt.now().year, dt.now().month, dt.now().day, start_hour)\n                    < dt.now()\n                    < dt(dt.now().year, dt.now().month, dt.now().day, end_hour)\n            ):\n                print(\"Do the work ....\")\n                with open(default_hoster, \"r+\") as hostfile:\n                    hosts = hostfile.read()\n                    for site in sites_to_block:\n           ..."
-  },
   "helper.HelperClass": {
     "id": "helper.HelperClass",
     "language": "python",
@@ -24,8 +7,8 @@
     "module_path": "helper",
     "depends_on": [
       "helper.DataProcessor",
-      "helper.HelperClass.process_data",
       "helper.HelperClass._internal_process",
+      "helper.HelperClass.process_data",
       "helper.HelperClass.get_result"
     ],
     "start_line": 2,
@@ -166,9 +149,9 @@
     "file_path": "./test_repo\\processor.py",
     "module_path": "processor",
     "depends_on": [
+      "processor.AdvancedProcessor.process_result",
       "helper.HelperClass",
       "processor.AdvancedProcessor.run",
-      "processor.AdvancedProcessor.process_result",
       "helper.DataProcessor",
       "main.utility_function"
     ],

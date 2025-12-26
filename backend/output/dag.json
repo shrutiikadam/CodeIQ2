@@ -1,9 +1,8 @@
 {
-  "app.block_websites": [],
   "helper.HelperClass": [
     "helper.DataProcessor",
-    "helper.HelperClass.process_data",
     "helper.HelperClass._internal_process",
+    "helper.HelperClass.process_data",
     "helper.HelperClass.get_result"
   ],
   "helper.HelperClass.__init__": [],
@@ -24,9 +23,9 @@
   ],
   "main.utility_function": [],
   "processor.AdvancedProcessor": [
+    "processor.AdvancedProcessor.process_result",
     "helper.HelperClass",
     "processor.AdvancedProcessor.run",
-    "processor.AdvancedProcessor.process_result",
     "helper.DataProcessor",
     "main.utility_function"
   ],
